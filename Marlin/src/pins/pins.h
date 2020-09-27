@@ -606,6 +606,8 @@
   #include "stm32f4/pins_FLYF407ZG.h"           // STM32F4                                env:FLYF407ZG
 #elif MB(MKS_ROBIN2)
   #include "stm32f4/pins_MKS_ROBIN2.h"          // STM32F4                                env:MKS_ROBIN2
+#elif MB(ET4)
+  #include "stm32f4/pins_ET4.h"                 // STM32F4                                env:MKS_ET4 
 #elif MB(FYSETC_S6_V2_0)
   #include "stm32f4/pins_FYSETC_S6_V2_0.h"      // STM32F4                                env:FYSETC_S6
 
@@ -1143,7 +1145,7 @@
 
 #ifdef Z_STOP_PIN
   #if Z_HOME_DIR < 0
-    #define Z_MIN_PIN Z_STOP_PIN
+    //#define Z_MIN_PIN Z_STOP_PIN
     #ifndef Z_MAX_PIN
       #define Z_MAX_PIN -1
     #endif
